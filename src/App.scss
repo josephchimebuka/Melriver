@@ -1,9 +1,5 @@
+@use './styles' as *;
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700&display=swap");
-@import "./varibles.scss";
-@import "./breakpoints.scss";
-@import "./components/header.scss";
-@import "./components/banner.scss";
-@import "./components/cases.scss";
 
 body,
 html {

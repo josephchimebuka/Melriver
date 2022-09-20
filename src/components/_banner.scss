@@ -1,0 +1,17 @@
+@use '../styles/' as s;
+
+
+.main{
+    height: 50vh; //fallback options
+    height: calc(var(--vh, 1vh)* 50);
+    background-color: s.$white;
+    .container{
+        .row{
+            .line{
+                span{
+
+                }
+            }
+        }
+    }
+}

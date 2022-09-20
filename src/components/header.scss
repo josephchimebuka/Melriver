@@ -1,0 +1,31 @@
+@use '../styles';
+.header{
+    position: fixed;
+    width: 100%;
+    height: 128px;
+  
+    .logo{
+        a{
+            font: size 1.2rem;
+            letter-spacing:0.5rem;
+            color: black;
+            text-decoration: none;
+            font-weight: 700;
+        }
+       
+    }
+
+    .nav{
+        width: 25px;
+       @include styles.media("<=phone"){
+        width: 20px;
+       }
+        span{
+           margin-bottom: 0.3rem; 
+           background: styles.$black;
+           height: 2px;
+           width: 100%;
+           display: block;
+        }
+    }
+}
