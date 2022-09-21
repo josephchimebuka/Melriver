@@ -1,5 +1,6 @@
 import React from 'react'
 import {ReactComponent as RightArrow} from '../assets/arrow-right.svg';
+import "./_banner.scss"
 
 function Banner() {
   return (
