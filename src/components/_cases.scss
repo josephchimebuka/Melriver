@@ -1,0 +1,118 @@
+@use "../styles" as s;
+
+.cases{
+    height: 50vh;
+    height: calc(var(--vh, 1vh)* 50);
+    
+    .cases-navigation{
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 6;
+        padding: 32px;
+        box-sizing: border-box;
+        @include s.media("<=tablet"){
+            display: none;
+        }
+        .cases-arrow{
+            background: rgba(0,0,0,0.4);
+            height: 72px;
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 72px;
+            cursor: pointer;
+            svg{
+                color: s.$white;
+                height: 28px;
+                width: 28px;
+            }
+            &.disabled{
+                opacity: 0.3;
+            }
+        }
+    }
+
+    .row{
+        @include s.media("<=tablet"){
+            flex-direction: column;
+        }
+        .case{
+            position: relative;
+            background: s.$black;
+            cursor: pointer;
+            &:hover{
+                .case-image{
+                    opacity: 0.4;
+                }
+            }
+            .case-details{
+                width: 33.3vw;
+                height: 50vh;
+                height: calc(var(--vh, 1vh)* 50);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 32px;
+                box-sizing: border-box;
+                z-index: 1;
+                position: relative;
+                @include s.media("<=tablet"){
+                    width: 100vw;
+                }
+                @include s.media("<=phone"){
+                    padding: 16px;
+                }
+               span{
+                    margin-top: 156px;
+                    font-size: 1.6rem;
+                    opacity: 0.8;
+                    color: s.$white; 
+                    font-weight: 600;
+                    @include s.media("<=desktop",">=tablet"){
+                        font-size: 1.4rem;
+                    }
+                    @include s.media("<=desktop"){
+                        font-size: 1.2rem;
+                        line-height: 2.2rem;
+                    }
+               } 
+               h2{
+                font-size: 2.4rem;
+                line-height: 3.4rem;
+                width: 85%;
+                margin-top: 16px;
+                color: s.$white;
+                @include s.media("<=desktop",">=tablet"){
+                    font-size: 2rem;
+                    line-height: 2.4rem;
+                }
+                @include s.media("<=phone"){
+                    font-size: 1.2rem;
+                    line-height: 2.2rem;
+                    margin-top: 8px;
+                }
+               }
+            }
+            .case-image{
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                position: absolute;
+                transition: .4s;
+                opacity: .65 cubic-bezier(.6,-.05, .1, 0.98);
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
