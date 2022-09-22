@@ -51,7 +51,7 @@
                 }
             }
             .case-details{
-                width: 33.3vw;
+                width: 33.3333vw;
                 height: 50vh;
                 height: calc(var(--vh, 1vh)* 50);
                 display: flex;
@@ -68,7 +68,7 @@
                     padding: 16px;
                 }
                span{
-                    margin-top: 156px;
+                    margin-top: 15px;
                     font-size: 1.6rem;
                     opacity: 0.8;
                     color: s.$white; 

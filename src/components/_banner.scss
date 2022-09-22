@@ -4,7 +4,7 @@
 
 .main{
     height: 50vh; //fallback options
-    height: calc(var(--vh, 1vh) * 58);
+    height: calc(var(--vh, 1vh) * 50);
     background-color: s.$white;
     .row{
         flex-direction: column;
