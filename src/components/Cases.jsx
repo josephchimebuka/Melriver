@@ -44,9 +44,9 @@ function Cases() {
                         <div className="case-details">
                         <h2>{caseItem.subtitle}</h2>
                             <span>{caseItem.title}</span>
-                           
                         </div>
                         <div className="case-image">
+                            
                             <img src={require(`../assets/${caseItem.img}.png`)} alt={caseItem.title} />
                         </div>
                     </div>
