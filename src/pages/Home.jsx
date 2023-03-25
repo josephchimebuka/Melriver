@@ -47,7 +47,7 @@ const Home = () => {
 
     const completeAnimation =()=>{
         setAnimationComplete(true)
-        alert("animation complete")
+        // alert("animation complete")
     };
     useEffect(() => {
         let vh = window.innerHeight * 0.01;
