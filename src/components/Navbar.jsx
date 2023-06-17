@@ -61,7 +61,12 @@ const Navbar = () => {
                                         </li>
                                     </ul>
                                     <ul className="nav-info">
-                                        <li className="nav-info-label"></li>
+                                        <li className="nav-info-label">Phone</li>
+                                        <li>09066039112</li>
+                                    </ul>
+                                    <ul className="nav-info">
+                                        <li className="nav-info-label">Legal</li>
+                                        <li>Privacy and Cookies</li>
                                     </ul>
                                 </div>
                             </div>

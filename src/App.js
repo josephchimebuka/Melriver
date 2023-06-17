@@ -7,7 +7,7 @@ import CaseStudies from './pages/CaseStudies'
 import About from "./pages/About";
 import Services from "./pages/Services";
 import { Route, Routes } from "react-router-dom";
-
+import Navbar from "./components/Navbar";
 
 function App() {
 useEffect(()=>{
@@ -34,6 +34,7 @@ const routes=[
         }
         </Routes>
       </div>
+      <Navbar/>
     </ >
   );
 }
