@@ -9,48 +9,108 @@ nav{
     position: fixed;
     background-color: s.$yellow;
     z-index: 1;
+    overflow: hidden;
+    left: 0;
   
     // display: none;
+
+    a{
+        position: relative;
+        &:after{
+            content:"";
+            height: 2px;
+            margin-top: 5px;
+            right: 0;
+            width: 0;
+            display: block;
+            position: absolute;
+            background: s.$black;
+            transition: 0.4s ease;
+            &:hover{
+                &:after{
+                    left: 0;
+                    width: 100%;
+                    background-color: s.$black;
+                }
+            }
+        }
+    }
     .nav-columns{
         transform: translateY(125px);
        display: flex;
        padding: 0 40px;
 
         .nav-column{
-            width: 45%;
+            width: 40%;
             & :last-child{
-                width: 55%;
+                width: 60%;
+                @include media('<=654px'){
+                    width: 100%;
+                }
             }
             .nav-label{
-                font-size: 3rem;
+                margin-bottom: 3rem;
+                font-size: 1.2rem;
+                @include media('<=tablet'){
+                    font-size: 1rem;
+                    margin-bottom: 3.4rem;
+                }
+                @include media('<=phone'){
+                    font-size: 0.075rem;
+                    margin-bottom: 1.2rem;
+                }
+            }
                 .nav-link{
                     padding: 0;
                     margin: 0;
                     li{
                         list-style: none;
                         margin-bottom: 2.8rem;
+                        @include media('<=phone'){
+                            margin-bottom: 1.6rem;
+                        }
+                        a{
+                            text-decoration: none;
+                            color: black;
+                            font-size: 2rem;
+                        }
                     }
-                    a{
-                        text-decoration: none;
-                        color: black;
-                    }
+                 
                 }
 
 
                 .nav-infos{
                     display: flex;
                     flex-wrap: wrap;
-                  @include media('<=600px'){
+                    @include media('<=654px'){
                     justify-content: space-between;
                   }
                    
                     .nav-info{
+                        padding: 0;
+                        width: 50%;
+                        
+                        & :nth-child(2), :nth-child(3){
+                            @include media('<=654px'){
+                               display: none;
+                              }
+                        }
                         .nav-info-label{
-
+                            font-weight: 600;
+                        }
+                        li{
+                            list-style: none;
+                            font-weight:  300;
+                            margin-bottom: 1.2rem;
+                            font-size: 1.4;
+                            a{
+                                text-decoration: none;
+                                color: black;
+                            }
                         }
                     }
                 }
-            }
+            
         }
     }
 }
