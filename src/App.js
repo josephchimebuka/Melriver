@@ -7,7 +7,7 @@ import CaseStudies from './pages/CaseStudies'
 import About from "./pages/About";
 import Services from "./pages/Services";
 import { Route, Routes } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navigation";
 
 function App() {
 useEffect(()=>{
@@ -38,5 +38,6 @@ const routes=[
     </ >
   );
 }
+
 
 export default App;
