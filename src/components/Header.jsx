@@ -7,7 +7,7 @@ function Header() {
       <div className="container">
         <div className="row v-center space-between">
             <div className="logo">
-                <a href="/">MELDEA</a>
+                <a href="/">LUTRICS</a>
             </div>
             <div className="nav">
                 <span></span>

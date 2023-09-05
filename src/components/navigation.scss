@@ -38,12 +38,12 @@ nav{
     .nav-columns{
         transform: translateY(125px);
        display: flex;
-       padding: 0 40px;
+       padding: 0 32px;
 
         .nav-column{
-            width: 40%;
+            width: 45%;
             & :last-child{
-                width: 60%;
+                width: 55%;
                 @include media('<=654px'){
                     width: 100%;
                 }
@@ -90,7 +90,7 @@ nav{
                         padding: 0;
                         width: 50%;
                         
-                        & :nth-child(2), :nth-child(3){
+                        &:nth-child(2), :nth-child(3){
                             @include media('<=654px'){
                                display: none;
                               }
