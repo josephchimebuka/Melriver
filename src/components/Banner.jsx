@@ -3,6 +3,7 @@ import {ReactComponent as RightArrow} from '../assets/arrow-right.svg';
 import "./_banner.scss"
 
 function Banner() {
+    
   return (
     <section className='main'>
         <div className="container">

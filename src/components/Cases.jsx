@@ -2,30 +2,40 @@ import React from 'react'
 import {ReactComponent as CaseNext} from "../assets/arrow-right.svg";
 import {ReactComponent as CasePrev} from "../assets/arrow-left.svg";
 import "./_cases.scss"
+import { useNavigate } from 'react-router-dom';
+
+
 
 const caseStudies = [
     {
         id:1,
-        subtitle: "Curology",
+        subtitle: "Lutrics box",
         title: "A custom formula for your skin's unique needs",
-        img: "curology-min"
+        img: "LutricsBox",
+        route: '/lutricsBox'
     },
     {
         id:2,
-        subtitle: "Yourspace",
+        subtitle: "Lutrics Edu",
         title: "Open space floor plans for you next ventures",
-        img: "yourspace-min"
+        img: "Edu",
+        route: '/lutricsEdu'
     },
     {
         id:3,
-        subtitle: "Lumin",
+        subtitle: "Lutrics Agric",
         title: "For your best look ever",
-        img: "lumin-min"
+        img: "Agric",
+        route: '/lutricsAgric'
     }
 ];
 
 
 function Cases() {
+    const router = useNavigate()
+    const handlePush =(route)=>{
+    router(route)
+    }
   return (
     <section className='cases'>
         <div className="container-fluid">
@@ -40,7 +50,9 @@ function Cases() {
             <div className="row">
                {
                 caseStudies.map((caseItem)=>(
-                    <div className='case' key={caseItem.id}>
+
+                    <div className='case' key={caseItem.id} 
+                    onClick={()=> handlePush(caseItem.route)}>
                         <div className="case-details">
                         <h2>{caseItem.subtitle}</h2>
                             <span>{caseItem.title}</span>

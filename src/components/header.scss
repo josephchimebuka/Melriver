@@ -1,32 +1,61 @@
-@use '../styles';
-.header{
+@use '../styles' as s;
+.header {
     position: fixed;
     width: 100%;
     height: 128px;
     z-index: 4;
-  
-    .logo{
-        a{
-            font: size 1.2rem;
-            letter-spacing:0.5rem;
-            color: black;
-            text-decoration: none;
-            font-weight: 700;
-        }
-       
+    @include s.media("<=phone") {
+      height: 96px;
     }
-
-    .nav{
-        width: 25px;
-       @include styles.media("<=phone"){
+    .logo {
+      a {
+        font-size: 1.1rem;
+        letter-spacing: 0.5rem;
+        color: s.$black;
+        text-decoration: none;
+        font-weight: 700;
+        img{
+            vertical-align: middle;
+        }
+      }
+    }
+    .nav-toggle {
+      cursor: pointer;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include s.media("<=tablet") {
+        margin-right: 24px;
+      }
+      @include s.media("<=phone") {
         width: 20px;
-       }
-        span{
-           margin-bottom: 0.3rem; 
-           background: styles.$black;
-           height: 2px;
-           width: 100%;
-           display: block;
+        margin-right: 16px;
+      }
+  
+      .hamburger-menu {
+        width: 25px;
+        span {
+          text-align: center;
+          margin-bottom: 0.3rem;
+          background: s.$black;
+          height: 2px;
+          width: 100%;
+          display: block;
         }
+      }
+      .hamburger-menu-close {
+        position: absolute;
+        display: none;
+  
+        svg {
+          @include s.media("<=tablet") {
+            width: 56px;
+          }
+          @include s.media("<=phone") {
+            width: 48px;
+          }
+        }
+      }
     }
-}
+  }
