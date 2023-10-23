@@ -10,7 +10,10 @@ function Banner() {
              <div className="row">
                 <h2>
                     <div className="line">
-                        <span>Revolutionalizing tech with IOT is</span>
+                        <span>Changing lives using Tech and IOT is</span>
+                    </div>
+                    <div className="R-line">
+                        <span>and IOT is</span>
                     </div>
                     <div className="line">
                         <span>what we do</span>

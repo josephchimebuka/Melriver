@@ -11,7 +11,7 @@ const Navbar = () => {
             <div className='nav-column'>
               <div className='nav-label'>Menu</div>
               <ul className='nav-links'>
-                <li>
+                {/* <li>
                   <NavLink to='/case-studies' exact>
                     Case Studies
                   </NavLink>
@@ -20,7 +20,7 @@ const Navbar = () => {
                   <NavLink to='/approach' exact>
                     Approach
                   </NavLink>
-                </li>
+                </li> */}
                 <li>
                   <NavLink to='/services' exact>
                     Services

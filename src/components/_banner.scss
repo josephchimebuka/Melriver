@@ -42,7 +42,23 @@
                     position: absolute;
                    }
             }
-          
+          .R-line{
+            display: none;
+            margin-bottom: 8px;
+            height: 56px;
+            position: relative;
+            overflow: hidden;
+            @include s.media('<=tablet'){
+               height: 48px;
+               }
+               @include s.media('<=phone'){
+                height: 32px;
+                display: block;
+               }
+               span{
+                position: absolute;
+               }
+          }
         }
         .btn-row{
             width: 256px;

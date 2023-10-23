@@ -1,0 +1,12 @@
+@use '../styles/' as s;
+
+.AgricProducts{
+    background: url('../assets/Agric.png') center/cover no-repeat fixed;
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff; // Text color
+    text-align: center;
+}

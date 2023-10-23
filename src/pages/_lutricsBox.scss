@@ -1,0 +1,146 @@
+@use '../styles/' as s;
+
+.hero{
+    background-color: s.$white;
+    .container{
+        padding-top: 15px;
+        display: flex;
+        width: 1560px;
+        min-width: 1560px;
+        justify-content: center;
+        align-items: center;
+        @include s.media('<=phone'){
+          flex-direction: column;
+          width: 100%;
+          min-width: 100%;
+          overflow-x: hidden;
+        }
+        .image{
+            width: 600px;
+            height: 600px;
+            object-fit: cover; 
+             @include s.media('<=phone'){
+             display: block;
+             position: relative;
+             width: 480px;
+            height: 480px;
+            }
+        }
+        .description{
+          @include s.media('<=phone'){
+            margin: 100px auto;
+            padding:0 20px ;
+            position: absolute;
+            top: 0;
+           }
+            h1{
+                font-size: 40px;
+
+            }
+            p{
+                font-size: 20px;
+                font-weight: 400;
+            }
+            .btn-row {
+                border: none;
+                margin-top: 30px;
+               
+                a {
+                  text-decoration: none;
+                  background-color: #fff;
+                  color: #333; 
+                  border: 2px solid #333;
+                  border-radius: 50px; 
+                  padding: 20px 40px; 
+                  font-size: 22px;
+                  font-weight: 700;
+                  cursor: pointer;
+                  transition: background-color 0.3s, color 0.3s;
+              
+                  &:hover {
+                    background-color: s.$yellow; 
+                    color: s.$black;
+                  }
+
+                  @include s.media('<=phone'){
+                    background-color: s.$yellow; 
+                    color: s.$black;
+                  }
+                }
+              }
+        }
+       
+    }
+}
+
+.videoSection{
+  @include s.media('<=phone'){
+    margin: 40px auto;
+    padding:0 20px ;
+   }
+   h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+.video{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+p{
+  @include s.media('<=phone'){
+    font-weight: 500;
+    font-size: 32px;
+   }
+}
+}
+.form-container{
+  @include s.media('<=phone'){
+    width: auto;
+    height: auto;
+    margin: 0 auto;
+   }
+   h2{
+ 
+    @include s.media('<=phone'){
+     font-style: italic;
+     padding: 0 20px;
+     }
+   }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 1500px;
+  height: 700px;
+  form {
+  display: flex;
+  flex-direction: column;
+  
+  input,
+  textarea {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  button {
+    margin: 10px;
+    padding: 10px;
+    background-color: s.$white;
+    color: s.$black;
+    border: 2px solid s.$black;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    
+    &:hover {
+      background-color: s.$yellow; 
+      color: s.$black;
+    }
+  }
+}
+}
