@@ -89,7 +89,7 @@ const LutricsBox = () => {
         </div> */}
        
         <div className='form-container'>
-            <h2>To order Lutrics Box sends us email</h2>
+            <h2>To order Lutrics Box sends us an email</h2>
         <form onSubmit={handleSubmit}>
         <input
           type="text"

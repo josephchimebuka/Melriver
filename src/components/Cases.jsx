@@ -10,21 +10,21 @@ const caseStudies = [
     {
         id:1,
         subtitle: "Lutrics box",
-        title: "A custom formula for your skin's unique needs",
+        title: "An IOT device that controls your lightings from your phone",
         img: "LutricsBox",
         route: '/lutricsBox'
     },
     {
         id:2,
         subtitle: "Lutrics Edu",
-        title: "Open space floor plans for you next ventures",
+        title: "Creates affordable access to education",
         img: "Edu",
         route: '/lutricsEdu'
     },
     {
         id:3,
         subtitle: "Lutrics Agric",
-        title: "For your best look ever",
+        title: "Improving the farm sector through sustainable agriculture",
         img: "Agric",
         route: '/lutricsAgric'
     }
