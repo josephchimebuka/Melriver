@@ -10,7 +10,7 @@ const caseStudies = [
     {
         id:1,
         subtitle: "Lutrics box",
-        title: "An IOT device that controls your lightings from your phone",
+        title: "An IOT device that controls your home lighting from your phone",
         img: "LutricsBox",
         route: '/lutricsBox'
     },
